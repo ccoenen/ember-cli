@@ -96,7 +96,7 @@ describe('livereload-server', function() {
     });
 
     it('does not trigger livereoad server of a change when there is a pattern match', function() {
-      subject.project.liveReloadFilterPatterns = [/^test\/fixtures\/proxy/];
+      subject.project.liveReloadFilterPatterns = [/^test[\\/]fixtures[\\/]proxy/];
       subject.didChange({
         filePath: '/home/user/my-project/test/fixtures/proxy/file-a.js'
       });
